@@ -20,10 +20,10 @@ def affichage(plateau, tour_suivant, fichier, nb_etapes, cmap):
     ani.save(fichier, fps=30)
 
 def transformation(x, mu, sigma): #on passe a une fonction nde filtrage qui va donner la valeur de la case au tour suivant
-    return np.exp(-((x-mu)/sigma)**2)
+    return np.exp(-0.5*((x-mu)/sigma)**2)
 
 mu = 3
-sigma = 0.7375 #valeurs qui peuvent varier et fournir des comportements plus ou moins sensibles
+sigma = 0.5215 #valeurs qui peuvent varier et fournir des comportements plus ou moins sensibles
 
 def tour_suivant(plateau): #règle de jeu de la vie
     
