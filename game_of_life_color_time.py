@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-#Ajout d'une continuité en temps, en changeant la fonction de transformation en un taux d'accroissement. 
+#Ajout d'une continuité en temps en changeant la fonction de transformation en un taux d'accroissement. 
 
 nb_tours = 200
 def affichage(plateau, tour_suivant, fichier, nb_etapes, cmap):
@@ -45,7 +45,7 @@ def tour_suivant(plateau): #règle de jeu de la vie
 
 
 remplis = np.random.rand(32, 32) 
-plateau = np.zeros((64,64)) #Génération d'un plateau aléatoire où seulement un carré de 32*"2 est remplis
+plateau = np.zeros((64,64)) #Génération d'un plateau aléatoire où seulement un carré de 32*32 est remplis
 pos_x = 64//4
 pos_y = 64//4
 plateau[pos_x:(pos_x + remplis.shape[1]), pos_y:(pos_y + remplis.shape[0])] = remplis.T
